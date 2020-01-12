@@ -1,6 +1,6 @@
 
 
-all: frequency
+all: main.o trie.o frequency
 frequency: trie.o main.o
 		gcc -Wall -g -fPIC -o frequency trie.o main.o -lm
 trie.o: trie.c trie.h
@@ -10,4 +10,4 @@ main.o: main.c trie.c trie.h
 
 .PHONY: clean all
 
-clean: rm -f *.o frequency
+clean:rm -f *.o frequency

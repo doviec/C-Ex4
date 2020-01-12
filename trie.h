@@ -1,3 +1,4 @@
+#ifndef _trie_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -20,3 +21,5 @@ void printLexicography(Node* root, char str[], int level);
 void printReverse(Node* root, char str[], int level);
 void freeTrie(Node* root);
 boolean checkChar(char* c);
+
+#endif

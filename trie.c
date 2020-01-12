@@ -18,7 +18,7 @@ void insertNode(Node* tree, char* word){
    if (checkChar(word)){
     Node* currentNode = tree;
     while (*word != '\0' && *word != '\t' && *word != '\n' && *word != ' '){
-        if (*word >= 65 && *word <= 122){  //checks if charachter is a letter
+        if (*word >= 65 && *word <= 122 && *word!= '_'){  //checks if charachter is a letter
             *word = tolower(*word);
             if (currentNode -> children[*word - CASE] == NULL){
             currentNode -> children[*word - CASE] = newNode();
