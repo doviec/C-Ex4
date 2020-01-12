@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "trietree.h": "c",
+        "stdio.h": "c",
+        "ctype.h": "c"
+    }
+}
