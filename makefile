@@ -10,4 +10,5 @@ main.o: main.c trie.c trie.h
 
 .PHONY: clean all
 
-clean:rm -f *.o frequency
+clean:	
+		rm -f *.o frequency
