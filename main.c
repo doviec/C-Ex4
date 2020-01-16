@@ -8,8 +8,7 @@ int main(int argc, char *argv[]){
     *word = 0;
     *(word+ 1) = 0;  
     char letter;
-    printf ("Please enter your words: \n");
-    while (scanf("%c",&letter) == 1 ){
+        while (scanf("%c",&letter) == 1 ){
         if(letter != '\0' && letter != '\t' && letter != '\n' && letter != ',' && letter != ' '){
             word[index] = letter;
             index++;   
