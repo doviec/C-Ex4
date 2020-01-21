@@ -5,6 +5,9 @@
 //initiate Node:
 Node* newNode(){
     Node *newNode = (Node*) malloc(sizeof(Node));
+    if (newNode == NULL) {
+        perror("malloc failed");
+    }
     newNode -> endOfWord = FALSE;
     newNode -> counter = 0;
     newNode -> parent = NULL;

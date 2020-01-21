@@ -5,6 +5,9 @@ int main(int argc, char *argv[]){
     int index = 0;
     int max = 0;
     char* word = (char*)malloc(sizeof(char)*2); 
+    if (word == NULL){
+        perror("malloc error");
+    }
     *word = 0;
     *(word+ 1) = 0;  
     char letter;
@@ -13,6 +16,9 @@ int main(int argc, char *argv[]){
             word[index] = letter;
             index++;   
             word = (char*)realloc(word,index + 2);  
+              if (word == NULL){
+                  perror("malloc error");
+                 }
             for (int i = index; i < index + 2; i++){
                 *(word + i) = 0;
             }       
@@ -20,6 +26,9 @@ int main(int argc, char *argv[]){
             insertNode(root,word);
             free(word);
             word = (char*)malloc(sizeof(char)*2);
+              if (word == NULL){
+                  perror("malloc error");
+                 }
                 *word = 0;
              *(word+ 1) = 0; 
             if (index >= max){
